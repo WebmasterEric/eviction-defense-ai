@@ -2,45 +2,212 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eviction Defense AI</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Educational eviction guidance to help tenants understand notices, timelines, and next steps." />
+  <meta name="description" content="Educational eviction guidance to help tenants understand notices, timelines, and next steps. Not legal advice." />
+  <meta name="robots" content="index,follow" />
+
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 900px; margin: auto; }
-    h1, h2 { color: #222; }
-    .cta { background: #000; color: #fff; padding: 15px; text-align: center; margin-top: 30px; }
-    a { color: #0055cc; }
+    :root{
+      --bg:#f6f7fb;
+      --card:#ffffff;
+      --text:#15171a;
+      --muted:#5b6472;
+      --border:rgba(20,24,30,.10);
+      --shadow:0 18px 50px rgba(16,24,40,.10);
+      --radius:16px;
+      --accent:#111827;
+      --accent2:#0f172a;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 800px at 20% -10%, rgba(15,23,42,.12), transparent 60%),
+                  radial-gradient(900px 600px at 90% 0%, rgba(17,24,39,.10), transparent 55%),
+                  var(--bg);
+      line-height:1.55;
+    }
+
+    a{ color:#0b5fff; text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    .wrap{ max-width:980px; margin:0 auto; padding:28px 18px 60px; }
+
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; margin-bottom:18px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; font-weight:800;
+      letter-spacing:.2px;
+    }
+    .dot{
+      width:12px; height:12px; border-radius:999px;
+      background: linear-gradient(135deg, #111827, #334155);
+      box-shadow: 0 6px 20px rgba(0,0,0,.18);
+    }
+
+    .pill{
+      font-size:12px; padding:8px 12px; border:1px solid var(--border);
+      border-radius:999px; background:rgba(255,255,255,.7);
+      color:var(--muted);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero{
+      background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.82));
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 30px 22px;
+    }
+    h1{ margin:0 0 10px; font-size: clamp(28px, 3.2vw, 42px); letter-spacing:-.5px; }
+    .sub{ margin:0 0 18px; color:var(--muted); font-size: 16px; max-width: 72ch; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:14px;
+      margin-top:18px;
+    }
+    @media(min-width:860px){
+      .grid{ grid-template-columns: 1.1fr .9fr; }
+    }
+
+    .card{
+      background: var(--card);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: 0 14px 40px rgba(16,24,40,.08);
+    }
+    .card h2{ margin:0 0 10px; font-size:18px; letter-spacing:-.2px; }
+    .card p{ margin:0 0 10px; color:var(--muted); }
+    .list{ margin:0; padding-left:18px; color:var(--muted); }
+    .list li{ margin:6px 0; }
+
+    .steps{
+      display:grid; gap:10px; margin-top:12px;
+    }
+    .step{
+      border:1px dashed var(--border);
+      border-radius: 14px;
+      padding: 12px 12px;
+      background: rgba(246,247,251,.6);
+    }
+    .step b{ display:block; margin-bottom:4px; color:var(--text); }
+
+    .cta{
+      margin-top:16px;
+      display:flex; flex-wrap:wrap; gap:10px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border:1px solid var(--border);
+      background: #fff;
+      font-weight:700;
+      min-width: 210px;
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color:#fff;
+      border-color: transparent;
+    }
+    .btn.primary:hover{ text-decoration:none; filter: brightness(1.03); }
+    .btn:hover{ text-decoration:none; }
+
+    .footer{
+      margin-top:18px; color:var(--muted); font-size:12px;
+      display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between;
+      padding: 14px 2px;
+    }
+    .fine{
+      background: rgba(255,255,255,.70);
+      border:1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px;
+      color: var(--muted);
+      font-size: 12px;
+    }
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand"><span class="dot"></span> Eviction Defense AI</div>
+      <div class="pill">Educational tool • Not legal advice</div>
+    </div>
 
-<h1>Eviction Defense AI</h1>
+    <section class="hero">
+      <h1>Facing eviction?</h1>
+      <p class="sub">
+        This tool explains common eviction notices, typical timelines, and practical next steps in plain language.
+        It’s designed to help you organize your situation quickly and avoid missing deadlines.
+      </p>
 
-<p>If you’re facing eviction, this tool helps you understand what an eviction notice means, what typically happens next, and how to organize your response.</p>
+      <div class="cta">
+        <a class="btn" href="./docs/notice-types.md">Understand notice types</a>
+        <a class="btn" href="./docs/timelines.md">See timelines</a>
+        <a class="btn primary" href="https://store.webmastereric.com">Optional document kits</a>
+      </div>
 
-<h2>What This Tool Provides</h2>
-<ul>
-  <li>Plain-language explanations</li>
-  <li>Eviction process overview</li>
-  <li>Response guidance</li>
-  <li>Educational self-help resources</li>
-</ul>
+      <div class="grid">
+        <div class="card">
+          <h2>What this tool does</h2>
+          <ul class="list">
+            <li>Explains notice types and what they usually mean</li>
+            <li>Outlines the general eviction process and timing</li>
+            <li>Helps you identify what step you’re on</li>
+            <li>Points you toward organized next actions</li>
+          </ul>
 
-<h2>Important Note</h2>
-<p>This tool is educational only and does not provide legal advice or representation.</p>
+          <div class="steps">
+            <div class="step">
+              <b>Step 1 — Identify your situation</b>
+              Start with the notice type and any dates on your paperwork.
+            </div>
+            <div class="step">
+              <b>Step 2 — Understand the timeline</b>
+              See what often happens next so you can plan ahead.
+            </div>
+            <div class="step">
+              <b>Step 3 — Take action fast</b>
+              If you need structured documents, use the optional kits.
+            </div>
+          </div>
+        </div>
 
-<h2>Need Step-by-Step Documents?</h2>
-<p>Optional self-help eviction document kits are available.</p>
+        <div class="card">
+          <h2>What this tool is not</h2>
+          <p>
+            This is not a law firm and does not provide legal advice or representation.
+            Laws vary by jurisdiction and by case facts.
+          </p>
+          <div class="fine">
+            If you can, seek licensed legal help or local legal aid. This tool exists to educate and organize—especially when time is short.
+          </div>
 
-<div class="cta">
-  <a href="https://store.webmastereric.com" style="color:#fff; text-decoration:none;">
-    View Eviction Defense Resources
-  </a>
-</div>
+          <h2 style="margin-top:14px;">Core guides</h2>
+          <ul class="list">
+            <li><a href="./docs/eviction-process-overview.md">Eviction process overview</a></li>
+            <li><a href="./docs/notice-types.md">Notice types</a></li>
+            <li><a href="./docs/timelines.md">Timelines</a></li>
+            <li><a href="./docs/what-you-can-do-now.md">What you can do now</a></li>
+            <li><a href="./docs/legal-scope.md">Legal scope & disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
 
-<footer>
-  <p><small>Educational use only • Eviction information</small></p>
-</footer>
-
+      <div class="footer">
+        <div>Built by Webmaster Eric • Transparent self-help systems</div>
+        <div><a href="https://store.webmastereric.com">store.webmastereric.com</a></div>
+      </div>
+    </section>
+  </div>
 </body>
 </html>
