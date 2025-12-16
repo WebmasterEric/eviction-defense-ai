@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Eviction Defense AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Educational eviction guidance to help tenants understand notices, timelines, and next steps." />
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 900px; margin: auto; }
+    h1, h2 { color: #222; }
+    .cta { background: #000; color: #fff; padding: 15px; text-align: center; margin-top: 30px; }
+    a { color: #0055cc; }
+  </style>
+</head>
+<body>
+
+<h1>Eviction Defense AI</h1>
+
+<p>If you’re facing eviction, this tool helps you understand what an eviction notice means, what typically happens next, and how to organize your response.</p>
+
+<h2>What This Tool Provides</h2>
+<ul>
+  <li>Plain-language explanations</li>
+  <li>Eviction process overview</li>
+  <li>Response guidance</li>
+  <li>Educational self-help resources</li>
+</ul>
+
+<h2>Important Note</h2>
+<p>This tool is educational only and does not provide legal advice or representation.</p>
+
+<h2>Need Step-by-Step Documents?</h2>
+<p>Optional self-help eviction document kits are available.</p>
+
+<div class="cta">
+  <a href="https://store.webmastereric.com" style="color:#fff; text-decoration:none;">
+    View Eviction Defense Resources
+  </a>
+</div>
+
+<footer>
+  <p><small>Educational use only • Eviction information</small></p>
+</footer>
+
+</body>
+</html>
